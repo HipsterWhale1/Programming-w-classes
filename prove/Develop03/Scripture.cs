@@ -1,24 +1,22 @@
 using System.Text.Json;
+using System.Linq;
 class Scripture
 {
-    JsonFile _text = new JsonFile();
-    Reference _reference = new Reference();
+    public Reference _reference = new Reference();
     List<Word> _words = new List<Word>();
-    List<Word> _displayedWords = new List<Word>();
-    int _wordsPerLevel;
-    int _difficulty = 0;
+    int _wordsPerLevel = 5;
 
-    public void SetScripture(int number)
+    public void ParseScripture(JsonFile rawScripture)
     {
-        //load textfile
-        //set ref
-        //set words
-    }
-        public void LoadScripture()
-    {
-        string allScriptures = File.ReadAllText(_text._filePath);
-        List<JsonFile> entries = JsonSerializer.Deserialize<List<JsonFile>>(allScriptures);
-    
+        _reference.SetReference(rawScripture._book, rawScripture._reference);
+
+        List<string> listText = rawScripture._verse.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
+        foreach (string text in listText)
+        {
+            Word word = new Word();
+            word.SetText(text);
+            _words.Add(word);
+        }
     }
     public void Display()
     {
@@ -28,24 +26,47 @@ class Scripture
             word.Display();
         }
     }
-    public void IncrementDifficulty()
-    {
-        if(_difficulty < 5)
-        {
-            _difficulty++;
-        }
+    // public void IncrementDifficulty()
+    // {
+    //     if(_difficulty < 5)
+    //     {
+    //         _difficulty++;
+    //     }
+    //     // set _wordsPerLevel;
 
-    }
+    // }
     public void HideWords()
     {
-        int size = _words.Count;
-        foreach(Word word in _words)
+        List<Word> displayedWords = new List<Word>();
+        foreach (Word word in _words)
         {
-            int hide = Random.Shared.Next(0, 6 - _difficulty);
-            if(hide == 1)
+            if (!word._isHidden)
             {
-                word.Hide();
+                displayedWords.Add(word);
             }
+        }
+        for(int i = 0; i < _wordsPerLevel; i++)
+        {
+            int hide = Random.Shared.Next(0, displayedWords.Count());
+            _words[hide].Hide();
+            displayedWords.RemoveAt(hide);
+        }
+    }
+    public void UnhideWords()
+    {
+        List<Word> hiddenWords = new List<Word>();
+        foreach (Word word in _words)
+        {
+            if (word._isHidden)
+            {
+                hiddenWords.Add(word);
+            }
+        }
+        for(int i = 0; i < _wordsPerLevel; i++)
+        {
+            int unhide = Random.Shared.Next(0, hiddenWords.Count());
+            _words[unhide].Unhide();
+            hiddenWords.RemoveAt(unhide);
         }
     }
 

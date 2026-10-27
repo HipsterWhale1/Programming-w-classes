@@ -1,29 +1,48 @@
 class Word
 {
-    string _text;
+    string _originalText;
+    string _displayText;
+    char _punctuation = '\0';
     int _length;
-    bool _isHidden = false;
+    public bool _isHidden = false;
 
     public void Hide()
     {
         _isHidden = true;
+        SetDisplayText();
     }
-    
-    public void GetWordLength()
+    public void Unhide()
     {
-        _length = _text.Length;
+        _isHidden = false;
+        SetDisplayText();
     }
-    public void GetDisplayString()
+    public void SetText(string word)
     {
-        if (_isHidden == true)
+        char lastChar = word[^1];
+        if (!char.IsLetter(lastChar))
         {
-            _text = new string('_', _length);
+            _punctuation = lastChar;
+            word = word[..^1];
+        }
+        _originalText = word;
+        _displayText = _originalText;
+        _length = _displayText.Length;
+        
+    }
+    public void SetDisplayText()
+    {
+        if (_isHidden)
+        {
+            _displayText = new string('_', _length);
+        }
+        else
+        {
+            _displayText = _originalText;
         }
     }
-
     public void Display()
     {
-        Console.Write($"_text ");
+        Console.Write(_displayText+_punctuation);
     }
 
 }
