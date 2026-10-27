@@ -11,6 +11,7 @@ class Program
     {
         LoadScriptures();
         ParseScriptures();
+        //_scriptures[0].Display();
         while (true)
         {
             Menu();
@@ -35,10 +36,10 @@ class Program
     {
         foreach (JsonFile rawScripture in _rawScriptures)
         {
-            Console.WriteLine($"DEBUG scripture from json: {rawScripture._reference}");
+            // Console.WriteLine($"DEBUG scripture from json: {rawScripture._reference}");
             Scripture scripture = new Scripture();
             scripture.ParseScripture(rawScripture);
-            Console.WriteLine($"DEBUG parsed scripture: {scripture._reference}");
+            // Console.WriteLine($"DEBUG parsed scripture: {scripture._reference}");
             _scriptures.Add(scripture);
 
         }
@@ -51,6 +52,7 @@ class Program
         while (true)
         {
             _scriptures[_selectedScripture].Display();
+            Console.Write("\n");
             Console.WriteLine($"Type 'next' to increase the difficulty. Type 'back' to decrease the difficulty. Type 'quit' to go back to scripture selection");
             string input = Console.ReadLine();
             if (input == "next")
@@ -74,15 +76,18 @@ class Program
         foreach (Scripture scripture in _scriptures)
         {
             Console.Write($"{count}: ");
-            scripture._reference.Display();
+            scripture.DisplayReference();
             count++;
         }
         string selectionString = Console.ReadLine();
+        //Console.WriteLine($"DEBUG Your selected scripture is {selectionString}");
         if (int.TryParse(selectionString, out int selection))
         {
-            if (selection <= 0 && selection >= (_scriptures.Count-1))
+            //Console.WriteLine($"DEBUG input is an int! And _scriptures.Count-1 is {_scriptures.Count-1}");
+            if (selection >= 0 && selection <= (_scriptures.Count-1))
             {
                 _selectedScripture = selection;
+                //Console.WriteLine($"DEBUG _selected scripture is {_selectedScripture}");
                 return;
             }
         }

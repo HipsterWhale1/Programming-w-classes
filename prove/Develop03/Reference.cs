@@ -13,7 +13,7 @@ class Reference
         string reference = $"{_book} {_chapter}:{_startVerse}";
         if (_endVerse != -1)
         {
-            reference += _endVerse;
+            reference += $"-{_endVerse}";
         }
         Console.WriteLine(reference);
     }
@@ -32,7 +32,5 @@ class Reference
             _startVerse = int.Parse(splitVerse[0]);
             _endVerse = int.Parse(splitVerse[1]);
         }
-
-
     }
 }

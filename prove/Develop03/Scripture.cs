@@ -1,5 +1,6 @@
 using System.Text.Json;
 using System.Linq;
+using System.Globalization;
 class Scripture
 {
     public Reference _reference = new Reference();
@@ -16,6 +17,7 @@ class Scripture
             Word word = new Word();
             word.SetText(text);
             _words.Add(word);
+            //Console.Write($"DEBUG {word._displayText}");
         }
     }
     public void Display()
@@ -23,8 +25,13 @@ class Scripture
         _reference.Display();
         foreach(Word word in _words)
         {
+            //add line where if number, newline (for each verse)
             word.Display();
         }
+    }
+    public void DisplayReference()
+    {
+        _reference.Display();
     }
     // public void IncrementDifficulty()
     // {
@@ -37,6 +44,7 @@ class Scripture
     // }
     public void HideWords()
     {
+        Console.WriteLine($"DEBUG hidewords was called");
         List<Word> displayedWords = new List<Word>();
         foreach (Word word in _words)
         {
@@ -47,13 +55,30 @@ class Scripture
         }
         for(int i = 0; i < _wordsPerLevel; i++)
         {
-            int hide = Random.Shared.Next(0, displayedWords.Count());
-            _words[hide].Hide();
-            displayedWords.RemoveAt(hide);
+            int wordsTotal = displayedWords.Count();
+            int selection = Random.Shared.Next(0, wordsTotal);
+            _words[selection].Hide();
+            displayedWords.RemoveAt(selection);
+            //DEBUG BELOW
+            int countUnhidden = 0;
+            foreach (Word word in _words)
+            {
+                if (!word._isHidden)
+                {
+                    countUnhidden++;
+                }
+
+            }
+            Console.WriteLine($"CountUnhidden is: {countUnhidden} and wordsTotal is {wordsTotal}");
+            if (countUnhidden != wordsTotal)
+            {
+                Console.WriteLine($"DEBUG ERROR they are not equal");
+            }
         }
     }
     public void UnhideWords()
     {
+        Console.WriteLine($"DEBUG unhidewords was called");
         List<Word> hiddenWords = new List<Word>();
         foreach (Word word in _words)
         {

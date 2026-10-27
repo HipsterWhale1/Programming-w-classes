@@ -27,7 +27,8 @@ class Word
         _originalText = word;
         _displayText = _originalText;
         _length = _displayText.Length;
-        
+        // Console.WriteLine($"DEBUG this is a word {_displayText}");
+        // Display();
     }
     public void SetDisplayText()
     {
@@ -42,7 +43,7 @@ class Word
     }
     public void Display()
     {
-        Console.Write(_displayText+_punctuation);
+        Console.Write($"{_displayText}{_punctuation} ");
     }
 
 }
