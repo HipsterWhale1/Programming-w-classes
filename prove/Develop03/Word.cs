@@ -4,7 +4,7 @@ class Word
     string _displayText;
     char _punctuation = '\0';
     int _length;
-    public bool _isHidden = false;
+    bool _isHidden = false;
 
     public void Hide()
     {
@@ -15,6 +15,10 @@ class Word
     {
         _isHidden = false;
         SetDisplayText();
+    }
+    public bool IsHidden()
+    {
+        return _isHidden;
     }
     public void SetText(string word)
     {

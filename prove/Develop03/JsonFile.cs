@@ -2,8 +2,27 @@ using System.Text.Json;
 
 class JsonFile
 {
-    public static string _filePath = "./Scriptures.json";
-    public string _book = "";
-    public string _reference = "";
-    public string _verse = "";
+    static string _filePath = "./Scriptures.json";
+    string _book = "";
+    string _reference = "";
+    string _verse = "";
+
+    static public string ReadFile()
+    {
+        return File.ReadAllText(_filePath);
+    }
+
+    public string GetBook()
+    {
+        return _book;
+    }
+    public string GetReference()
+    {
+        return _reference;
+    }
+    public string GetVerse()
+    {
+        return _verse;
+    }
 }
+
