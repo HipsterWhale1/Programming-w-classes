@@ -1,0 +1,15 @@
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\bin\Debug\net10.0\Sandbox.exe
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\bin\Debug\net10.0\Sandbox.deps.json
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\bin\Debug\net10.0\Sandbox.runtimeconfig.json
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\bin\Debug\net10.0\Sandbox.dll
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\bin\Debug\net10.0\Sandbox.pdb
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\obj\Debug\net10.0\Sandbox.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\obj\Debug\net10.0\Sandbox.AssemblyInfoInputs.cache
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\obj\Debug\net10.0\Sandbox.AssemblyInfo.cs
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\obj\Debug\net10.0\Sandbox.csproj.CoreCompileInputs.cache
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\obj\Debug\net10.0\Sandbox.sourcelink.json
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\obj\Debug\net10.0\Sandbox.dll
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\obj\Debug\net10.0\refint\Sandbox.dll
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\obj\Debug\net10.0\Sandbox.pdb
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\obj\Debug\net10.0\Sandbox.genruntimeconfig.cache
+C:\Users\Matthew\Documents\school\fall_2026\cse210\cse210-projects\sandbox\Sandbox\obj\Debug\net10.0\ref\Sandbox.dll

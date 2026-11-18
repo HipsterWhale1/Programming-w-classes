@@ -1,0 +1,14 @@
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\bin\Debug\net10.0\Prep1.exe
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\bin\Debug\net10.0\Prep1.deps.json
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\bin\Debug\net10.0\Prep1.runtimeconfig.json
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\bin\Debug\net10.0\Prep1.dll
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\bin\Debug\net10.0\Prep1.pdb
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.AssemblyInfoInputs.cache
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.AssemblyInfo.cs
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.csproj.CoreCompileInputs.cache
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.dll
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\obj\Debug\net10.0\refint\Prep1.dll
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.pdb
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\obj\Debug\net10.0\Prep1.genruntimeconfig.cache
+C:\Users\Matthew\Documents\git\cse210\csharp-prep\Prep1\obj\Debug\net10.0\ref\Prep1.dll
